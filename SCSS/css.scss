@@ -1,0 +1,116 @@
+$link__colors: #0372AB;
+.div{
+
+}
+.webinars {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 100%;
+
+  &__preview {
+    background: linear-gradient(60.56deg, #123BA5 0.62%, #133AA5 1.43%, #2F29A4 20.15%, #401FA3 36.61%, #461BA3 48.92%, #6907A5 99.38%);
+    color: white;
+    padding: 0 10px;
+    @media (max-width: 1100px) {
+      padding: 0 0;
+    }
+
+    .title {
+      font-size: calc(18px + 6 * ((100vw - 100px) / (1440 - 100)));
+      font-weight: 700;
+      margin: 0 0 20px 0;
+    }
+
+    .subtitle {
+      padding: 0 6px 0 0;
+      font-size: calc(13px + 5 * ((100vw - 100px) / (1440 - 100)));
+      font-weight: 400;
+    }
+  }
+
+  &__body {
+    .links {
+      font-size: calc(16px + 5 * ((100vw - 112px) / (1440 - 112)));
+      font-weight: 700;
+
+      a {
+        color: #BDBDBD;
+
+        &:hover {
+          text-decoration: none;
+        }
+      }
+
+      a[class*="active"] {
+        color: $link__colors;
+        border-bottom: 4px solid $link__colors;
+
+        &:hover {
+          text-decoration: none;
+        }
+
+      }
+    }
+
+    &__tabs {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      max-width: 1170px;
+
+      &__content {
+        font-size: calc(12px + 5 * ((100vw - 112px) / (1440 - 112)));
+
+        .img-hidden {
+          @media (max-width: 992px) {
+            display: none;
+          }
+        }
+
+        .time {
+          border: 1px solid #F79259;
+          border-radius: 3px;
+        }
+
+        &__link {
+          color: $link__colors;
+          text-decoration: underline;
+        }
+      }
+
+      &__archive {
+        .card-img-top {
+          //min-height: 400px;
+          //@media (max-width: 1600px) {
+          //  min-height: 220px;
+          //}
+          //@media (max-width: 1440px) {
+          //  min-height: 400px;
+          //}
+          //@media (max-width: 1240px) {
+          //  min-height: 200px;
+          //}
+          //@media (max-width: 768px) {
+          //  min-height: 0;
+          //}
+        }
+
+        &__title {
+          font-size: calc(10px + 5 * ((100vw - 112px) / (1440 - 112)));
+        }
+
+        &__card-links {
+          font-size: calc(10px + 5 * ((100vw - 112px) / (1440 - 112)));
+          color: $link__colors;
+          text-decoration: underline;
+        }
+
+        .time {
+          border: 1px solid #F79259;
+          border-radius: 3px;
+        }
+      }
+    }
+  }
+}
